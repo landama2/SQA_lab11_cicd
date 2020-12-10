@@ -24,7 +24,7 @@ jobs:
     - name: Build app
       run: mvn package --file petclinic/pom.xml
     - name: Run the app
-      run: java -jar petclinic/target/petclinic-2.2.2.BUILD-SNAPSHOT.jar
+      run: nohup java -jar petclinic/target/petclinic-2.2.2.BUILD-SNAPSHOT.jar &
     - name: Build the tests
       run: mvn --file petclinic-selenium/pom.xml -DskipTests install
     - name: Run the tests
